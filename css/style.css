@@ -1437,3 +1437,7 @@ textarea {
     float: none;
     padding-left: 0; }
   /* @end */ }
+
+  div#wrap > header {
+    display: flex!important
+  }
