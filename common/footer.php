@@ -10,7 +10,7 @@
           <h5 class="primary--text">Proposez des ressources et discutez avec nous</h5>
           <p>Si vous souhaitez proposer une ressource ou discuter avec des membres, rejoignez-nous sur notre serveur Discord !</p>
           <br/>
-          <iframe src="https://discordapp.com/widget?id=583703763789807626&theme=dark" allowtransparency="true" frameborder="0"></iframe>
+          <iframe src="https://discordapp.com/widget?id=583703763789807626&theme=dark" allowtransparency="true" frameborder="0" class="discord"></iframe>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
   </div>
 </div>
 
-<footer class="page-footer" role="contentinfo">
+<footer class="page-footer primary" role="contentinfo">
     <div class="container">
         <div class="row" id="footer-content">
             <div class="col l6 s12">
@@ -45,7 +45,7 @@
                 <?php endif; ?>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+                <h5 class="white-text">Ressources</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
                     <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright secondary">
         <div class="container">
         <p>Propulsé par <a href="http://omeka.org">Omeka</a> et site géré par <a href="http://youthforclimate.fr">Youth For Climate</a>.</p>
         <a class="grey-text text-lighten-4 right" href="#top-nav"><?php echo __('Back to top'); ?></a>
@@ -91,6 +91,10 @@
     color: rgb(54,78,44)!important;
 }
 
+iframe.discord {
+    width: 100%;
+    height: 400px;
+}
 </style>
 
 </body>
