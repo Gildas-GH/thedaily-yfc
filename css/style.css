@@ -730,11 +730,6 @@ textarea {
     margin: 0 24px 48px 0;
   }
 
-  #secondary {
-    display: flex;
-    justify-content: space-between;
-  }
-
   #secondary nav li {
     display: flex;
     justify-content: center;
@@ -1284,8 +1279,6 @@ textarea {
     position: fixed;
     left: 0;
     right: 0; }
-  #content {
-    padding: 24px 48px 0; }
   #primary {
     width: 100%; }
   /* @end */

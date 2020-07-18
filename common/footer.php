@@ -72,6 +72,27 @@
 
 <script src="https://cdn.becauseofprog.fr/v2/libs/materialize/materialize.min.js"></script>
 
+<style>
+.primary {
+    background: rgb(26,105,47);
+    background: linear-gradient(135deg, rgba(26,105,47,1) 0%, rgba(69,123,47,1) 29%, rgba(125,184,40,1) 100%) !important; 
+}
+
+.primary--text {
+    color: rgb(26,105,47)!important;
+}
+
+.secondary {
+    background: rgb(26,105,47);
+    background: linear-gradient(243deg, rgba(26,105,47,1) 0%, rgba(54,78,44,1) 100%)!important; 
+}
+
+.secondary--text {
+    color: rgb(54,78,44)!important;
+}
+
+</style>
+
 </body>
 
 </html>

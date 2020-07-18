@@ -3,7 +3,7 @@
 <?php if (get_theme_option('Homepage Text') && (get_theme_option('Homepage Text Position') !== 'bottom')): ?>
 
 <!-- Presentation carousel -->
-<div class="carousel carousel-slider center welcome-bop-carousel">
+<div class="carousel carousel-slider center">
   <div
     class="carousel-item white-text primary">
     <h3 class="carousel-bop-homepage-title">Bibliothèque</h3>
@@ -92,17 +92,12 @@
           $items = thedaily_get_recent_items($recentItems);
           foreach ($items as $item): ?>
 
-          <div class="col s12 m6 l6 xl6">
+          <div class="col s12 m6 l4 xl3">
             <div class="card sticky-action hoverable">
 
             <?php if (metadata($item, 'has files')): ?>
               <div class="card-image">
                 <?php echo link_to_item(item_image('thumbnail', array(), 0, $item), array('class' => 'image border-radius-top'), 'show', $item); ?>
-                <a href="#" class="btn-floating halfway-fab waves-effect waves-light primary">
-                  <i class="material-icons">
-                    <span class="iconify" data-icon="mdi-flash"></span>
-                  </i>
-                </a>
               </div>
             <?php endif; ?>
               <div class="card-content">
@@ -115,17 +110,18 @@
                   <?php endif; ?>
                 </p>
                 <p>&nbsp;</p>
-            
-                <div class="chip">
-                  <?php if ($creator = metadata($item, array('Dublin Core', 'Creator'))): ?>
-                  <?php echo $creator; ?>
-                  <?php endif; ?>
-                </div>
-                <div class="chip">
-                  <?php if ($date = metadata($item, array('Dublin Core', 'Date'))): ?>
-                  <?php echo $date; ?>
-                  <?php endif; ?>
-                </div>
+                
+                <?php if ($creator = metadata($item, array('Dublin Core', 'Creator'))): ?>
+                  <div class="chip">
+                    <?php echo $creator; ?>
+                  </div>
+                <?php endif; ?>
+
+                <?php if ($date = metadata($item, array('Dublin Core', 'Date'))): ?>
+                  <div class="chip">
+                    <?php echo $date; ?>
+                  </div>
+                <?php endif; ?>
 
                 <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
                 
