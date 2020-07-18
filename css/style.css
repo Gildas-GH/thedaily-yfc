@@ -38,7 +38,7 @@ nav,
 section,
 summary {
   /* 1 */
-  display: block; }
+  display: block!important; }
 
 /**
  * Add the correct display in IE 9-.
@@ -382,7 +382,7 @@ textarea {
     padding: 0;
     font-weight: 400; }
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Archivo Black", sans-serif;
+    /*font-family: "Archivo Black", sans-serif;*/
     font-weight: normal; }
   h1 {
     font-size: 5.25vmin;
@@ -855,10 +855,10 @@ textarea {
 
   /* @end */
   /* @group ----- Footer ----- */
-  footer {
+  /*footer {
     padding: 10px 48px 24px;
     clear: both;
-  }
+  }*/
   /* @end */
   /* @group ----- Browse ----- */
   .browse #content {

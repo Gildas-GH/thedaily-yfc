@@ -1,3 +1,7 @@
+<?php echo head(array('bodyid'=>'home')); ?>
+
+<?php if (get_theme_option('Homepage Text') && (get_theme_option('Homepage Text Position') !== 'bottom')): ?>
+
 <!-- Presentation carousel -->
 <div class="carousel carousel-slider center welcome-bop-carousel">
   <div
@@ -17,10 +21,6 @@
     
   </div>
 </div>
-
-<?php echo head(array('bodyid'=>'home')); ?>
-
-<?php if (get_theme_option('Homepage Text') && (get_theme_option('Homepage Text Position') !== 'bottom')): ?>
 
 <!-- Intro -->
 <div class="row container">
