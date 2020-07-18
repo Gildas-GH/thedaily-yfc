@@ -25,3 +25,17 @@
         });
     });
 })(jQuery)
+
+document.addEventListener("DOMContentLoaded",function(){
+  
+    // Initialize the home page carousel, to display multiple pictures
+    let carousel = document.querySelectorAll('.carousel')
+    let carouselInstance = M.Carousel.init(carousel, {
+      fullWidth: true,
+      indicators: true
+    })
+  
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems);
+});
+  

@@ -401,11 +401,6 @@ textarea {
   a {
     text-decoration: none;
     color: #000; }
-  p a,
-  span a,
-  #content ul a,
-  #content ol a {
-    background-color: yellow; }
   p,
   ul {
     margin: 24px 0; }

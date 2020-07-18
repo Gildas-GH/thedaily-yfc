@@ -71,7 +71,6 @@
 </script>
 
 <script src="https://cdn.becauseofprog.fr/v2/libs/materialize/materialize.min.js"></script>
-<script src="https://becauseofprog.fr/build/bundle.js"></script>
 
 </body>
 
