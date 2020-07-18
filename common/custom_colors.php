@@ -14,27 +14,6 @@
 
 <style>
 
-p a,
-span a,
-#content ul a,
-#content ol a,
-table a,
-.secondary-nav li a,
-.pagination a,
-.item-pagination a,
-#sort-links a,
-.element-text a,
-#exhibit-page-navigation a,
-#featured .featured-meta h3,
-.button,
-button,
-input[type="submit"],
-.view-items-link,
-.lg-sub-html a {
-    background-color: <?php echo $buttonBg; ?>;
-    color: <?php echo $buttonText; ?>;
-}
-
 .button,
 button,
 input[type="submit"] {

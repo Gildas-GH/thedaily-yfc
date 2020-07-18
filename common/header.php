@@ -28,7 +28,7 @@
     ?>
 
     <link rel="stylesheet" href="https://cdn.becauseofprog.fr/v2/libs/materialize/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="https://becauseofprog.fr/static/bundle.css"/>
+    <link type="text/css" rel="stylesheet" href="https://becauseofprog.fr/build/bundle.css"/>
 
     <!-- JavaScripts -->
     <?php
@@ -67,10 +67,10 @@
             </div>
 
 
-            <nav id="top-nav" role="navigation" class="closed">
+            <div id="top-nav" role="navigation" class="closed">
                 <button type="button" class="menu-toggle" aria-label="<?php echo __('Toggle menu'); ?>"></button>
                 <?php echo public_nav_main(); ?>
-            </nav>
+            </div>
 
         </header>
 
