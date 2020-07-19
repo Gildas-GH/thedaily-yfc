@@ -14,12 +14,6 @@
 
 <style>
 
-.button,
-button,
-input[type="submit"] {
-    border-color: <?php echo $buttonText; ?>
-}
-
 #exhibit-pages {
     background-color: <?php echo $exhibitNavBg; ?>;
 }

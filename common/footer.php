@@ -109,7 +109,7 @@ header {
 }
 
 .navbutton {
-  padding-top:16px;
+  padding-top:16px!important;
 }
 </style>
 

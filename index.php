@@ -34,10 +34,10 @@
           <h2>Bienvenue !</h2>
           <p><?php echo get_theme_option('Homepage Text'); ?></p>
 
-          <form id="search-form" name="search-form" role="search" class="input-field" action="/search" method="get">
+          <form id="search-inline" name="search-form" role="search" class="input-field" action="/search" method="get">
             <input type="text" name="query" id="query" value="" title="Recherche" placeholder="Recherche">
             <label for="query">Rechercher...</label>
-            <button name="submit_search" id="submit_search" type="submit" value="Recherche" class="primary">Recherche</button>
+            <button name="submit_search" id="submit_search" type="submit" value="Recherche" class="primary btn waves-effect waves-light">Recherche</button>
           </form>
         </div>
       </div>
@@ -134,8 +134,8 @@
 <!-- Presentation carousel -->
 <div class="carousel carousel-slider center">
   <div class="carousel-item white-text primary" id="contact">
-    <div class="row">
-    <div class="col s12 m12 l6 xl6 flow-text">
+    <div class="row container">
+    <div id="contact-image" class="col s12 m12 l6 xl6 flow-text">
       <?php $contactImage = get_theme_option("Contact Image");
           if ($contactImage) {
               $storage = Zend_Registry::get('storage');
@@ -149,13 +149,13 @@
     </div>
   </div>
   <div class="carousel-item white-text" style="background: url('https://i.cdn.becauseofprog.fr/images.unsplash.com/photo-1535905748047-14b2415c77d5?w=720')">
-    <div class="row">
+    <div class="row container">
       <div class="col s12 m12 l6 xl6">
         <h3 class="carousel-bop-homepage-title">Suivez-nous</h3>
         <h5 class="light grey-text text-lighten-3">Sur les réseaux sociaux</h5>
       </div>
       <div class="col s12 m12 l6 xl6">
-        <div class="card">
+        <div class="card carousel-bop-homepage-title">
           <div class="card-content">
             <h5 class="primary--text">Connectons nous !</h5>
             <p>Seront affichés ici les réseaux sociaux. S'il y en a un jour.</p>
