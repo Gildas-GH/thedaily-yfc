@@ -9,13 +9,13 @@
     <h3 class="carousel-bop-homepage-title">Bibliothèque</h3>
     <h5 class="light grey-text text-lighten-3">Toutes les ressources possibles et inimaginables</h5>
   </div>
-  <div class="carousel-item white-text" style="background: url('https://images.unsplash.com/photo-1535905748047-14b2415c77d5?fit=crop&w=1333')">
+  <div class="carousel-item white-text" style="background: url('https://i.cdn.becauseofprog.fr/images.unsplash.com/photo-1535905748047-14b2415c77d5?w=720')">
     <h3 class="carousel-bop-homepage-title">Climat et environnement</h3>
     <h5 class="light grey-text text-lighten-3">Ressources sur le dérèglement climatique, et les mouvements climat</h5>
     <a class="waves-effect waves-light btn primary center white-text" href="/items/browse">Parcourir les ressources</a>
   </div>
   <div class="carousel-item white-text"
-    style="background: url('https://images.unsplash.com/photo-1535905748047-14b2415c77d5?fit=crop&w=1333')">
+    style="background: url('https://i.cdn.becauseofprog.fr/images.unsplash.com/photo-1535905748047-14b2415c77d5?w=720')">
     <h3 class="carousel-bop-homepage-title">Idées</h3>
     <h5 class="light white-text text-lighten-3">Plaidoyers, idées, projets...</h5>
     
@@ -28,16 +28,17 @@
 
       <div class="row">
         <div class="col s12 m12 l6">
-          <img src="https://i.cdn.becauseofprog.fr/images.unsplash.com/photo-1535905748047-14b2415c77d5?w=720" width="100%" class="border-radius-left">
+          <img src="https://i.cdn.becauseofprog.fr/images.unsplash.com/photo-1535905748047-14b2415c77d5?w=720" width="100%" class="border-radius-left padding0">
         </div>
         <div class="col s12 m12 l6">
           <h2>Bienvenue !</h2>
           <p><?php echo get_theme_option('Homepage Text'); ?></p>
 
-          <div id="search-container" role="search">
-            <?php echo search_form(array('form_attributes' => array('role' => 'search', 'class' => 'closed'))); ?>
-            <button type="button" class="search-toggle" title="<?php echo __('Toggle search'); ?>"></button>
-          </div>
+          <form id="search-form" name="search-form" role="search" class="input-field" action="/search" method="get">
+            <input type="text" name="query" id="query" value="" title="Recherche" placeholder="Recherche">
+            <label for="query">Rechercher...</label>
+            <button name="submit_search" id="submit_search" type="submit" value="Recherche" class="primary">Recherche</button>
+          </form>
         </div>
       </div>
 
@@ -57,29 +58,7 @@
 
 <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
 
-<div id="primary">
-    <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
-    <?php endif; ?>
-    <?php if (get_theme_option('Display Featured Item') == 1): ?>
-    <!-- Featured Item -->
-    <div id="featured-item" class="featured">
-        <h2><?php echo __('Featured Item'); ?></h2>
-        <?php echo random_featured_items(1); ?>
-    </div><!--end featured-item-->
-    <?php endif; ?>
-    <?php if (get_theme_option('Display Featured Collection')): ?>
-    <!-- Featured Collection -->
-    <div id="featured-collection" class="featured">
-        <h2><?php echo __('Featured Collection'); ?></h2>
-        <?php echo random_featured_collection(); ?>
-    </div><!-- end featured collection -->
-    <?php endif; ?>
-    <?php if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
-    <!-- Featured Exhibit -->
-    <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
-    <?php endif; ?>
 
-</div><!-- end primary -->
 
 <div id="secondary">
     <?php
@@ -138,7 +117,7 @@
         </div>
 
         <nav>
-          <ul class="center">
+          <ul class="center navbutton brand-logo center-align">
             <li>
                 <a class="waves-effect waves-light btn primary center white-text" href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a>
             </li>
@@ -152,19 +131,38 @@
 
 </div><!-- end secondary -->
 
-<div id="contact primary">
-  <div id="contact-image">
-    <?php $contactImage = get_theme_option("Contact Image");
-      if ($contactImage) {
-           $storage = Zend_Registry::get('storage');
-           $contactImage = $storage->getUri($storage->getPathByType($contactImage, 'theme_uploads'));
-           echo '<img src="' . $contactImage . '" />';
-       }
-       echo get_theme_option("Contact Text");
-    ?>
+<!-- Presentation carousel -->
+<div class="carousel carousel-slider center">
+  <div class="carousel-item white-text primary" id="contact">
+    <div class="row">
+    <div class="col s12 m12 l6 xl6 flow-text">
+      <?php $contactImage = get_theme_option("Contact Image");
+          if ($contactImage) {
+              $storage = Zend_Registry::get('storage');
+              $contactImage = $storage->getUri($storage->getPathByType($contactImage, 'theme_uploads'));
+              echo '<img src="' . $contactImage . '" />';
+          }
+          echo get_theme_option("Contact Text");
+        ?>
+    </div class="col s12 m12 l6 xl6">
+      <iframe src="https://discord.com/widget?id=583703763789807626&theme=dark" allowtransparency="true" frameborder="0"></iframe>
+    </div>
   </div>
-  <div id="discord">
-    <iframe src="https://discord.com/widget?id=583703763789807626&theme=dark" allowtransparency="true" frameborder="0"></iframe>
+  <div class="carousel-item white-text" style="background: url('https://i.cdn.becauseofprog.fr/images.unsplash.com/photo-1535905748047-14b2415c77d5?w=720')">
+    <div class="row">
+      <div class="col s12 m12 l6 xl6">
+        <h3 class="carousel-bop-homepage-title">Suivez-nous</h3>
+        <h5 class="light grey-text text-lighten-3">Sur les réseaux sociaux</h5>
+      </div>
+      <div class="col s12 m12 l6 xl6">
+        <div class="card">
+          <div class="card-content">
+            <h5 class="primary--text">Connectons nous !</h5>
+            <p>Seront affichés ici les réseaux sociaux. S'il y en a un jour.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

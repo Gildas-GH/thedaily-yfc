@@ -42,15 +42,4 @@ input[type="submit"] {
     color: <?php echo $homeIntroText; ?>;
 }
 
-#contact {
-    background-color: <?php echo $homeIntroBg; ?>;
-    color: <?php echo $homeIntroText; ?>;
-}
-
-
-footer {
-  background-color: <?php echo $footerBg; ?>;
-  color: <?php echo $footerTextColor; ?>;
-}
-
 </style>

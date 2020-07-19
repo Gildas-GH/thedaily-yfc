@@ -82,6 +82,7 @@
     color: rgb(26,105,47)!important;
 }
 
+#featured .featured-meta h3,
 .secondary {
     background: rgb(26,105,47);
     background: linear-gradient(243deg, rgba(26,105,47,1) 0%, rgba(54,78,44,1) 100%)!important; 
@@ -101,6 +102,14 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+}
+
+.padding0 {
+  padding: 0;
+}
+
+.navbutton {
+  padding-top:16px;
 }
 </style>
 

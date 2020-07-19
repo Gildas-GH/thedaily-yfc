@@ -785,10 +785,9 @@ textarea {
     margin: 0;
     background-color: #000;
     display: inline-block; }
-  #featured .featured-meta h3 {
-    background-color: yellow; }
+
   #featured .featured-meta h3 a {
-    color: #000; }
+    color: #fff; }
   #featured .record img {
     min-width: 100%;
     min-height: 100%;
