@@ -10,14 +10,14 @@
           <h5 class="primary--text">Proposez des ressources et discutez avec nous</h5>
           <p>Si vous souhaitez proposer une ressource ou discuter avec des membres, rejoignez-nous sur notre serveur Discord !</p>
           <br/>
-          <iframe src="https://discordapp.com/widget?id=583703763789807626&theme=dark" allowtransparency="true" frameborder="0" class="discord"></iframe>
+          <iframe src="https://discord.com/widget?id=583703763789807626&theme=dark" allowtransparency="true" frameborder="0" class="discord"></iframe>
         </div>
       </div>
     </div>
     <div class="col s12 m7">
       <div class="card">
         <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1535905748047-14b2415c77d5?fit=crop&w=1333" class="border-radius-top">
+          <img src="https://i.cdn.becauseofprog.fr/images.unsplash.com/photo-1535905748047-14b2415c77d5?w=720" class="border-radius-top">
           <span class="card-title shadow no-mobile">À propos</span>
         </div>
         <div class="card-content">
@@ -94,6 +94,13 @@
 iframe.discord {
     width: 100%;
     height: 400px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 </style>
 

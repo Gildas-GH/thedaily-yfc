@@ -28,11 +28,16 @@
 
       <div class="row">
         <div class="col s12 m12 l6">
-          <img src="https://images.unsplash.com/photo-1535905748047-14b2415c77d5?fit=crop&w=1333" width="100%" class="border-radius-left">
+          <img src="https://i.cdn.becauseofprog.fr/images.unsplash.com/photo-1535905748047-14b2415c77d5?w=720" width="100%" class="border-radius-left">
         </div>
         <div class="col s12 m12 l6">
           <h2>Bienvenue !</h2>
           <p><?php echo get_theme_option('Homepage Text'); ?></p>
+
+          <div id="search-container" role="search">
+            <?php echo search_form(array('form_attributes' => array('role' => 'search', 'class' => 'closed'))); ?>
+            <button type="button" class="search-toggle" title="<?php echo __('Toggle search'); ?>"></button>
+          </div>
         </div>
       </div>
 
@@ -132,10 +137,10 @@
           <?php endforeach; ?>
         </div>
 
-        <nav class="items-nav navigation secondary-nav">
-          <ul class="navigation">
+        <nav>
+          <ul class="center">
             <li>
-                <a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a>
+                <a class="waves-effect waves-light btn primary center white-text" href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a>
             </li>
           </ul>
         </nav>
@@ -147,7 +152,7 @@
 
 </div><!-- end secondary -->
 
-<div id="contact">
+<div id="contact primary">
   <div id="contact-image">
     <?php $contactImage = get_theme_option("Contact Image");
       if ($contactImage) {
@@ -159,7 +164,7 @@
     ?>
   </div>
   <div id="discord">
-    <iframe src="https://discordapp.com/widget?id=583703763789807626&theme=dark" width="300" height="200" allowtransparency="true" frameborder="0"></iframe>
+    <iframe src="https://discord.com/widget?id=583703763789807626&theme=dark" allowtransparency="true" frameborder="0"></iframe>
   </div>
 </div>
 
